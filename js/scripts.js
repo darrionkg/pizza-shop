@@ -26,6 +26,25 @@ Pizza.prototype.addToToppings = function (topping) {
   }
 };
 
+function SidesOrDrinks() {
+  this.sides = [],
+  this.sidesCost = 0
+}
+
+SidesOrDrinks.prototype.addASide = function() {
+
+}
+
+SidesOrDrinks.prototype.addADrink = function() {
+  
+}
+
+function Order() {
+  this.totalCost = 0,
+  this.listOfItems = [],
+  this.itemId = 0
+}
+
 //User Interface Logic
 $(document).ready(function() {
   $("#userOrder").submit(function(event) {
@@ -33,8 +52,6 @@ $(document).ready(function() {
     var size = $("#size").val();
     var crust = $("#crust").val();
     var sauce = $("#sauce").val();
-    //var cheese = $("#cheese").val();
-    var toppings = [];
     var newPizza = new Pizza(size);
     $("input:checkbox[name=toppingChoice]:checked").each(function(){
       var topping = $(this).val();

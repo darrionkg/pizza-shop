@@ -10,9 +10,12 @@
   </head>
   <body>
     <div class="container">
-      <header class="jumbotron" id="myHeader">
-        <h1>Darrion's Pizza Shop</h1>
-      </header>
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">Add Pizza</a></li>
+        <li role="presentation"><a href="#">Sides</a></li>
+        <li role="presentation"><a href="#">Drinks</a></li>
+        <button id=submitButton type="submit" class="btn btn-danger">Checkout</button>
+      </ul>
       <form id="userOrder">
         <p>Size:</p>
         <select class="form-control" id="size">
@@ -42,7 +45,6 @@
             <option value="halfCheese">Half Cheese</option>
           </select>
         </div>
-
         <div class="toppings">
           <p>Select Your Toppings: </p>
           <input type="checkbox" name="toppingChoice" value="pepperoni"> pepperoni<br>
@@ -56,10 +58,13 @@
           <input type="checkbox" name="toppingChoice" value="romaTomatoes">roma tomatoes<br>
           <input type="checkbox" name="toppingChoice" value="pineapple">pineapple<br>
         </div>
+        <button id="addToCart1" type="button" name="button">Add to Cart</button>
+
+        <div class="sides">
 
 
+        </div>
 
-        <button id=submitButton type="submit" class="btn btn-danger">Submit</button>
       </form>
     </div>
   </body>
