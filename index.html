@@ -13,47 +13,52 @@
       <header class="jumbotron" id="myHeader">
         <h1>Darrion's Pizza Shop</h1>
       </header>
-      <div class="crustCheeseSauce">
-        <p>Select Your Crust:</p>
-        <select class="form-control" id="crust">
-          <option value="handTossed">Hand Tossed</option>
-          <option value="thinCrust">Thin Crust</option>
-          <option value="brooklynStyle">Brooklyn Style</option>
-        </select>
-        <p>Select Your Sauce:</p>
-        <select class="form-control" id="sauce">
-          <option value="tomato">Tomato</option>
-          <option value="bbqSauce">BBQ Sauce</option>
-          <option value="garlicParmesan">Garlic Parmesan White Sauce</option>
-        </select>
-        <p>Select Your Cheese:</p>
-        <select class="form-control" id="cheese">
-          <option value="normalTime">12:05</option>
-          <option value="normalTime">2:10</option>
-          <option value="peakTime">4:20</option>
-          <option value="peakTime">6:30</option>
-          <option value="normalTime">8:05</option>
-        </select>
-      </div>
-
-      <div class="toppings">
-        <p>Select Your Toppings: </p>
-        <input type="checkbox" name="toppingChoice" value="pepperoni"> pepperoni<br>
-         <input type="checkbox" name="toppingChoice" value="bacon">bacon<br>
-         <input type="checkbox" name="toppingChoice" value="grilledChicken">grilled chicken<br>
-         <input type="checkbox" name="toppingChoice" value="canadianBacon">canadian bacon<br>
-         <input type="checkbox" name="toppingChoice" value="mushrooms">mushrooms<br>
-         <input type="checkbox" name="toppingChoice" value="bananaPeppers">banana peppers<br>
-         <input type="checkbox" name="toppingChoice" value="jalapenoPeppers">jalapeño peppers<br>
-         <input type="checkbox" name="toppingChoice" value="romaTomatoes">roma tomatoes<br>
-         <input type="checkbox" name="toppingChoice" value="pineapple">pineapple<br>
-      </div>
-
-
       <form id="userOrder">
-        <h2> </h2>
-        <label for="number"></label>
-        <input type="text" id="number">
+        <p>Size:</p>
+        <select class="form-control" id="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="extraLarge">Extra Large</option>
+        </select>
+        <div class="crustCheeseSauce">
+          <p>Select Your Crust:</p>
+          <select class="form-control" id="crust">
+            <option value="handTossed">Hand Tossed</option>
+            <option value="thinCrust">Thin Crust</option>
+            <option value="brooklynStyle">Brooklyn Style</option>
+            <option value="cheeseCrust">Cheese Filled Crust (+$1.00)</option>
+          </select>
+          <p>Select Your Sauce:</p>
+          <select class="form-control" id="sauce">
+            <option value="tomato">Tomato Sauce</option>
+            <option value="bbqSauce">BBQ Sauce</option>
+            <option value="garlicParmesan">Garlic Parmesan White Sauce</option>
+          </select>
+          <p>Select Your Cheese:</p>
+          <select class="form-control" id="cheese">
+            <option value="addCheese">Add Cheese</option>
+            <option value="noCheese">No Cheese</option>
+            <option value="halfCheese">Half Cheese</option>
+          </select>
+        </div>
+
+        <div class="toppings">
+          <p>Select Your Toppings: </p>
+          <input type="checkbox" name="toppingChoice" value="pepperoni"> pepperoni<br>
+          <input type="checkbox" name="toppingChoice" value="bacon">bacon (+$0.50)<br>
+          <input type="checkbox" name="toppingChoice" value="grilledChicken">grilled chicken (+$0.50)<br>
+          <input type="checkbox" name="toppingChoice" value="canadianBacon">canadian bacon<br>
+          <input type="checkbox" name="toppingChoice" value="olives">olives<br>
+          <input type="checkbox" name="toppingChoice" value="mushrooms">mushrooms (+$0.25)<br>
+          <input type="checkbox" name="toppingChoice" value="bananaPeppers">banana peppers (+$0.25)<br>
+          <input type="checkbox" name="toppingChoice" value="jalapenoPeppers">jalapeño peppers (+$0.25)<br>
+          <input type="checkbox" name="toppingChoice" value="romaTomatoes">roma tomatoes<br>
+          <input type="checkbox" name="toppingChoice" value="pineapple">pineapple<br>
+        </div>
+
+
+
         <button id=submitButton type="submit" class="btn btn-danger">Submit</button>
       </form>
     </div>
