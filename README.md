@@ -1,27 +1,23 @@
 # Beep boop
 
-#### A beep boop generator, 3/29/2019
+#### Pizza Shop, 4/12/2019
 #### https://darrionkg.github.io/beep-boop
 
 #### By **Darrion Gering**
 
 ## Description
 
-_This program allows the user to enter a number, and returns a nubmer, Beep, boop or I'm sorry, Dave. I'm afraid I can't do that._
-
-_Also includes a Bop It game if you get bored of the robot counter!_
+_This website allows users to order customized pizzas _
 
 
 
 #### Specs
 |Spec|Input|Output|
 |-|-|-|
-|The program takes an input number, and returns a range of numbers|4|0,1,2,3,4|
-|If the number contains 1, return "Beep!"|1|"Beep!"|
-|If the number contains 2, return "Boop!"|2|"Boop!"|
-|If the number contains 3, return "I'm sorry dave, I can't do that!"|3|"I'm sorry, Dave. I'm afraid I can't do that."|
-|Program combines range of numbers with Beep, Boop, and Dave values|4|0, "Beep", "Boop", "I'm sorry...", 4|
-|Program works for numbers with multiple digits|11|0,"Beep", "Boop", "I'm sorry...", 4, 5..., "Beep"|
+|The program has different options for the pizza|select options and click order|order sent|
+|The program uses pizza object with properties|N/A|N/A|
+|Uses a prototype method to adjust cost| N/A | N/A|
+
 
 ## Setup/Installation Requirements
 
