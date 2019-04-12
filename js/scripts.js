@@ -28,19 +28,18 @@ Pizza.prototype.addToToppings = function (topping) {
 
 function SidesOrDrinks() {
   this.sides = ["Breadsticks", "Coca Cola"],
-  this.numberOfSides = [],
+  this.numberOfSides = [0, 0],
   this.sidesCost = 0
 }
 
 SidesOrDrinks.prototype.addASide = function() {
-
-  var breadsticksCost = 5.50;
-  sides.push("breadsticks")
-
+  this.numberOfSides[0] += 1;
+  this.sidesCost += 4;
 }
 
 SidesOrDrinks.prototype.addADrink = function() {
-  var drinkCost = 5.50
+  this.numberOfSides[1] += 1;
+  this.sidesCost += 3;
 }
 
 function Order() {
@@ -59,6 +58,11 @@ Order.prototype.addPizza = function(pizza) {
   this.totalCost += pizza.cost;
 }
 
+Order.addSidesAndDrinks = function(sides) {
+  this.updateId();
+  this.cost += sides.sidesCost;
+}
+
 //User Interface Logic
 
 var order = new Order();
@@ -66,12 +70,13 @@ var order = new Order();
 function updateItemCount() {
   var itemCount = order.itemId;
   $("#itemCount").text(itemCount);
-  $("#cost").text("$" + order.totalCost)
+  $("#cost").text("Total - $" + order.totalCost)
   $("#cost").show();
   $("#itemCount").show();
 }
 
 function updateActiveClass(hideClass, showClass, removeClass, addClass) {
+  $("#checkout").hide();
   $(hideClass).hide();
   $(showClass).show();
   $(removeClass).removeClass("active");
@@ -102,16 +107,21 @@ $(document).ready(function() {
     updateActiveClass("#customPizza", "#sidesOrDrinks", "li#pizzaMenu", "li#sidesDrinksMenu");
   });
 
+  var sides = new SidesOrDrinks();
   $("#addDrinks").click(function() {
-
+    sides.addADrink();
   });
 
   $("#addSticks").click(function() {
-
+    sides.addASide();
   });
 
   $("#userOrder").submit(function(event) {
-    console.log("test")
+    $("li#pizzaMenu").removeClass("active");
+    $("li#sidesDrinksMenu").removeClass("active");
+    $("#customPizza").hide();
+    $("#sidesOrDrinks").hide();
+    $("#checkout").show();
     event.preventDefault();
   });
 });
