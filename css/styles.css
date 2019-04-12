@@ -12,6 +12,10 @@ img {
   width: 300px;
 }
 
+#addDrinks, #addSticks {
+  margin: 5% 34%;
+}
+
 .nav {
   border-bottom: 2px solid black;
   border-left: 2px solid black;
@@ -22,6 +26,18 @@ img {
 .row {
   margin: 10%;
 }
+
+.panel {
+  margin: 10px;
+}
+.panel-group .panel + .panel {
+  margin-top: 10px;
+}
+
+.panel-heading {
+  text-align: center;
+}
+
 #submitButton {
   position: absolute;
   right: 20%;
@@ -31,4 +47,18 @@ img {
   position: absolute;
   right: 50%;
   bottom: 50;
+}
+
+#itemCount {
+  position: absolute;
+  right: 17%;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  background: #D9534F;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  font: 14px Arial, sans-serif;
 }

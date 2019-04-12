@@ -15,6 +15,7 @@
           <li role="presentation" id="pizzaMenu" class="active"><a href="#">Add Pizza</a></li>
           <li role="presentation" id="sidesDrinksMenu"> <a href="#">Sides</a></li>
           <button id=submitButton type="submit" class="btn btn-danger">Checkout</button>
+          <p> <span id="itemCount"></span> </p>
         </ul>
         <div id="customPizza">
         <p>Size:</p>
@@ -62,16 +63,20 @@
       </div>
 
         <div id="sidesOrDrinks">
-          <div class="row">
-            <div class="col-sm-5">
-              <h1>Breadsticks</h1>
-              <img id="breadsticksImg" src="img/breadsticks.jpg" alt="Breadsticks">
-              <button id="addSticks" type="button" name="button">Add to Cart</button>
+          <div class="row panel-group">
+            <div class="col-sm-5 panel panel-default">
+              <h1 class="panel-heading">Breadsticks</h1>
+              <div class="panel-body">
+                <img id="breadsticksImg" src="img/breadsticks.jpg" alt="Breadsticks">
+                <button id="addSticks" type="button" name="button">Add to Cart</button>
+              </div>
             </div>
-            <div class="col-sm-5">
-              <h1>Drinks</h1>
-              <img id="drinksImg" src="img/drinks.png" alt="pepsi image">
-              <button id="addDrinks" type="button" name="button">Add to Cart</button>
+            <div class="col-sm-5 panel panel-default">
+              <h1 class="panel-heading">Drinks</h1>
+              <div class="panel-body">
+                <img id="drinksImg" src="img/drinks.png" alt="pepsi image">
+                <button id="addDrinks" type="button" name="button">Add to Cart</button>
+              </div>
             </div>
           </div>
           <button id=submitButton2 type="submit" class="btn btn-danger">Checkout</button>

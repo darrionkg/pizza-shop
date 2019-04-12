@@ -28,15 +28,19 @@ Pizza.prototype.addToToppings = function (topping) {
 
 function SidesOrDrinks() {
   this.sides = [],
+  this.numberOfSides = [],
   this.sidesCost = 0
 }
 
 SidesOrDrinks.prototype.addASide = function() {
 
+  var breadsticksCost = 5.50;
+  sides.push("breadsticks")
+
 }
 
 SidesOrDrinks.prototype.addADrink = function() {
-
+  var drinkCost = 5.50
 }
 
 function Order() {
@@ -45,14 +49,24 @@ function Order() {
   this.itemId = 0
 }
 
+Order.prototype.updateId = function() {
+  this.itemId += 1;
+}
+
 Order.prototype.addPizza = function(pizza) {
   this.listOfItems.push(pizza);
+  this.updateId();
   this.totalCost += pizza.cost;
 }
 
 //User Interface Logic
 
 var order = new Order();
+
+function updateItemCount() {
+  var itemCount = order.itemId;
+  $("#itemCount").text(itemCount);
+}
 
 $(document).ready(function() {
   $("#addToCart1").click(function() {
@@ -70,6 +84,15 @@ $(document).ready(function() {
     $("#sidesOrDrinks").show();
     $("li#pizzaMenu").removeClass("active");
     $("li#sidesDrinksMenu").addClass("active");
+    updateItemCount();
+  });
+
+  $("#addDrinks").click(function() {
+
+  });
+
+  $("#addSticks").click(function() {
+
   });
 
   $("#userOrder").submit(function(event) {
