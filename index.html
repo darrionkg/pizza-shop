@@ -10,13 +10,13 @@
   </head>
   <body>
     <div class="container">
-      <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Add Pizza</a></li>
-        <li role="presentation"><a href="#">Sides</a></li>
-        <li role="presentation"><a href="#">Drinks</a></li>
-        <button id=submitButton type="submit" class="btn btn-danger">Checkout</button>
-      </ul>
       <form id="userOrder">
+        <ul class="nav nav-pills">
+          <li role="presentation" id="pizzaMenu" class="active"><a href="#">Add Pizza</a></li>
+          <li role="presentation" id="sidesDrinksMenu"> <a href="#">Sides</a></li>
+          <button id=submitButton type="submit" class="btn btn-danger">Checkout</button>
+        </ul>
+        <div id="customPizza">
         <p>Size:</p>
         <select class="form-control" id="size">
           <option value="small">Small</option>
@@ -59,10 +59,22 @@
           <input type="checkbox" name="toppingChoice" value="pineapple">pineapple<br>
         </div>
         <button id="addToCart1" type="button" name="button">Add to Cart</button>
+      </div>
 
-        <div class="sides">
-
-
+        <div id="sidesOrDrinks">
+          <div class="row">
+            <div class="col-sm-5">
+              <h1>Breadsticks</h1>
+              <img id="breadsticksImg" src="img/breadsticks.jpg" alt="Breadsticks">
+              <button id="addSticks" type="button" name="button">Add to Cart</button>
+            </div>
+            <div class="col-sm-5">
+              <h1>Drinks</h1>
+              <img id="drinksImg" src="img/drinks.png" alt="pepsi image">
+              <button id="addDrinks" type="button" name="button">Add to Cart</button>
+            </div>
+          </div>
+          <button id=submitButton2 type="submit" class="btn btn-danger">Checkout</button>
         </div>
 
       </form>

@@ -36,7 +36,7 @@ SidesOrDrinks.prototype.addASide = function() {
 }
 
 SidesOrDrinks.prototype.addADrink = function() {
-  
+
 }
 
 function Order() {
@@ -45,10 +45,17 @@ function Order() {
   this.itemId = 0
 }
 
+Order.prototype.addPizza = function(pizza) {
+  this.listOfItems.push(pizza);
+  this.totalCost += pizza.cost;
+}
+
 //User Interface Logic
+
+var order = new Order();
+
 $(document).ready(function() {
-  $("#userOrder").submit(function(event) {
-    event.preventDefault();
+  $("#addToCart1").click(function() {
     var size = $("#size").val();
     var crust = $("#crust").val();
     var sauce = $("#sauce").val();
@@ -58,5 +65,15 @@ $(document).ready(function() {
       newPizza.addToToppings(topping);
     });
     newPizza.checkSize();
+    order.addPizza(newPizza);
+    $("#customPizza").hide();
+    $("#sidesOrDrinks").show();
+    $("li#pizzaMenu").removeClass("active");
+    $("li#sidesDrinksMenu").addClass("active");
+  });
+
+  $("#userOrder").submit(function(event) {
+    console.log("test")
+    event.preventDefault();
   });
 });
