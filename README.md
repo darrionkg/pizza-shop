@@ -1,7 +1,7 @@
 # Beep boop
 
 #### Pizza Shop, 4/12/2019
-#### https://darrionkg.github.io/beep-boop
+#### https://darrionkg.github.io/pizza-shop
 
 #### By **Darrion Gering**
 
