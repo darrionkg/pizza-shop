@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Suranna" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>Darrion's Pizza Shop</title>
   </head>
   <body>
     <div class="container">
@@ -15,10 +16,11 @@
           <li role="presentation" id="pizzaMenu" class="active"><a href="#">Add Pizza</a></li>
           <li role="presentation" id="sidesDrinksMenu"> <a href="#">Sides</a></li>
           <button id=submitButton type="submit" class="btn btn-danger">Checkout</button>
-          <p> <span id="itemCount"></span> </p>
+          <p> <span id="itemCount"></span> <span id="cost"></span></p>
+          <img id="pizzaLogo" src="img/pizzalogo.png" alt="pizza logo">
         </ul>
         <div id="customPizza">
-        <p>Size:</p>
+        <p><strong>Size:</strong></p>
         <select class="form-control" id="size">
           <option value="small">Small</option>
           <option value="medium">Medium</option>
@@ -26,20 +28,20 @@
           <option value="extraLarge">Extra Large</option>
         </select>
         <div class="crustCheeseSauce">
-          <p>Select Your Crust:</p>
+          <p><strong>Select Your Crust:</strong></p>
           <select class="form-control" id="crust">
             <option value="handTossed">Hand Tossed</option>
             <option value="thinCrust">Thin Crust</option>
             <option value="brooklynStyle">Brooklyn Style</option>
             <option value="cheeseCrust">Cheese Filled Crust (+$1.00)</option>
           </select>
-          <p>Select Your Sauce:</p>
+          <p><strong>Select Your Sauce:</strong></p>
           <select class="form-control" id="sauce">
             <option value="tomato">Tomato Sauce</option>
             <option value="bbqSauce">BBQ Sauce</option>
             <option value="garlicParmesan">Garlic Parmesan White Sauce</option>
           </select>
-          <p>Select Your Cheese:</p>
+          <p><strong>Select Your Cheese:</strong></p>
           <select class="form-control" id="cheese">
             <option value="addCheese">Add Cheese</option>
             <option value="noCheese">No Cheese</option>
@@ -47,7 +49,7 @@
           </select>
         </div>
         <div class="toppings">
-          <p>Select Your Toppings: </p>
+          <p><strong>Select Your Toppings:</p>
           <input type="checkbox" name="toppingChoice" value="pepperoni"> pepperoni<br>
           <input type="checkbox" name="toppingChoice" value="bacon">bacon (+$0.50)<br>
           <input type="checkbox" name="toppingChoice" value="grilledChicken">grilled chicken (+$0.50)<br>
@@ -72,14 +74,13 @@
               </div>
             </div>
             <div class="col-sm-5 panel panel-default">
-              <h1 class="panel-heading">Drinks</h1>
+              <h1 class="panel-heading">Coca Cola</h1>
               <div class="panel-body">
-                <img id="drinksImg" src="img/drinks.png" alt="pepsi image">
+                <img id="drinksImg" src="img/drink.jpg" alt="coca cola image">
                 <button id="addDrinks" type="button" name="button">Add to Cart</button>
               </div>
             </div>
           </div>
-          <button id=submitButton2 type="submit" class="btn btn-danger">Checkout</button>
         </div>
 
       </form>

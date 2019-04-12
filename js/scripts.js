@@ -27,7 +27,7 @@ Pizza.prototype.addToToppings = function (topping) {
 };
 
 function SidesOrDrinks() {
-  this.sides = [],
+  this.sides = ["Breadsticks", "Coca Cola"],
   this.numberOfSides = [],
   this.sidesCost = 0
 }
@@ -66,6 +66,16 @@ var order = new Order();
 function updateItemCount() {
   var itemCount = order.itemId;
   $("#itemCount").text(itemCount);
+  $("#cost").text("$" + order.totalCost)
+  $("#cost").show();
+  $("#itemCount").show();
+}
+
+function updateActiveClass(hideClass, showClass, removeClass, addClass) {
+  $(hideClass).hide();
+  $(showClass).show();
+  $(removeClass).removeClass("active");
+  $(addClass).addClass("active");
 }
 
 $(document).ready(function() {
@@ -80,11 +90,16 @@ $(document).ready(function() {
     });
     newPizza.checkSize();
     order.addPizza(newPizza);
-    $("#customPizza").hide();
-    $("#sidesOrDrinks").show();
-    $("li#pizzaMenu").removeClass("active");
-    $("li#sidesDrinksMenu").addClass("active");
+    updateActiveClass("#customPizza", "#sidesOrDrinks", "li#pizzaMenu", "li#sidesDrinksMenu");
     updateItemCount();
+  });
+
+  $("#pizzaMenu").click(function() {
+      updateActiveClass("#sidesOrDrinks", "#customPizza", "li#sidesDrinksMenu", "li#pizzaMenu");
+  });
+
+  $("#sidesDrinksMenu").click(function() {
+    updateActiveClass("#customPizza", "#sidesOrDrinks", "li#pizzaMenu", "li#sidesDrinksMenu");
   });
 
   $("#addDrinks").click(function() {
