@@ -113,7 +113,6 @@ function updateActiveClass(hideClass, showClass, removeClass, addClass) {
 
 $(document).ready(function() {
   $("#addToCart1").click(function() {
-    console.log("test");
     var size = $("#size").val();
     var crust = $("#crust").val();
     var sauce = $("#sauce").val();
