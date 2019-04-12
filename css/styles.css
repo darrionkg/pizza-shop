@@ -13,6 +13,10 @@ img {
   display: none;
 }
 
+#checkoutMessage {
+  font-size: 20px;
+}
+
 #drinksImg, #breadsticksImg {
   height: 300px;
   width: 300px;

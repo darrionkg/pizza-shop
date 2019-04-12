@@ -30,35 +30,35 @@
         <div class="crustCheeseSauce">
           <p><strong>Select Your Crust:</strong></p>
           <select class="form-control" id="crust">
-            <option value="handTossed">Hand Tossed</option>
-            <option value="thinCrust">Thin Crust</option>
-            <option value="brooklynStyle">Brooklyn Style</option>
-            <option value="cheeseCrust">Cheese Filled Crust (+$1.00)</option>
+            <option value="Hand Tossed">Hand Tossed</option>
+            <option value="Thin Crust">Thin Crust</option>
+            <option value=">Brooklyn Style">Brooklyn Style</option>
+            <option value="Cheese Filled Crust">Cheese Filled Crust (+$1.00)</option>
           </select>
           <p><strong>Select Your Sauce:</strong></p>
           <select class="form-control" id="sauce">
-            <option value="tomato">Tomato Sauce</option>
-            <option value="bbqSauce">BBQ Sauce</option>
-            <option value="garlicParmesan">Garlic Parmesan White Sauce</option>
+            <option value="Tomato Sauce">Tomato Sauce</option>
+            <option value="BBQ Sauce">BBQ Sauce</option>
+            <option value="Garlic Parmesan White Sauce">Garlic Parmesan White Sauce</option>
           </select>
           <p><strong>Select Your Cheese:</strong></p>
           <select class="form-control" id="cheese">
-            <option value="addCheese">Add Cheese</option>
-            <option value="noCheese">No Cheese</option>
-            <option value="halfCheese">Half Cheese</option>
+            <option value="Cheese">Add Cheese</option>
+            <option value="No Cheese">No Cheese</option>
+            <option value="Half Cheese">Half Cheese</option>
           </select>
         </div>
         <div class="toppings">
           <p><strong>Select Your Toppings:</p>
           <input type="checkbox" name="toppingChoice" value="pepperoni"> pepperoni<br>
           <input type="checkbox" name="toppingChoice" value="bacon">bacon (+$0.50)<br>
-          <input type="checkbox" name="toppingChoice" value="grilledChicken">grilled chicken (+$0.50)<br>
-          <input type="checkbox" name="toppingChoice" value="canadianBacon">canadian bacon<br>
+          <input type="checkbox" name="toppingChoice" value="grilled chicken">grilled chicken (+$0.50)<br>
+          <input type="checkbox" name="toppingChoice" value="canadianbacon">canadian bacon<br>
           <input type="checkbox" name="toppingChoice" value="olives">olives<br>
           <input type="checkbox" name="toppingChoice" value="mushrooms">mushrooms (+$0.25)<br>
-          <input type="checkbox" name="toppingChoice" value="bananaPeppers">banana peppers (+$0.25)<br>
-          <input type="checkbox" name="toppingChoice" value="jalapenoPeppers">jalapeño peppers (+$0.25)<br>
-          <input type="checkbox" name="toppingChoice" value="romaTomatoes">roma tomatoes<br>
+          <input type="checkbox" name="toppingChoice" value="banana peppers">banana peppers (+$0.25)<br>
+          <input type="checkbox" name="toppingChoice" value="jalapeno peppers">jalapeño peppers (+$0.25)<br>
+          <input type="checkbox" name="toppingChoice" value="roma tomatoes">roma tomatoes<br>
           <input type="checkbox" name="toppingChoice" value="pineapple">pineapple<br>
         </div>
         <button id="addToCart1" type="button" name="button">Add to Cart</button>
@@ -89,7 +89,8 @@
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-body">
-
+              <h2 panel-heading>Here's Your order: </h2>
+              <p><br><span id="checkoutMessage"></span></p>
             </div>
           </div>
         </div>
