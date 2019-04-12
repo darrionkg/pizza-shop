@@ -1,0 +1,101 @@
+body {
+  background-color: #f7e7c8;
+}
+
+#myHeader {
+  text-align: center;
+  padding: 0;
+}
+
+
+#myTable {
+  width: 80%;
+
+}
+
+#myTable th, #myTable td {
+  border: 2px solid black;
+}
+
+#myTable td {
+  width: 10px;
+  height: 5px;
+}
+
+#userInput {
+  display: flex;
+  margin: 10px 20px;
+  justify-content: center;
+}
+#userInput h2{
+  clear: both;
+  display: flex;
+  justify-content: center;
+}
+
+#userInput input#number {
+  font-size: 24px;
+  margin: 5px;
+  width: 80px;
+  height: 50px;
+}
+
+#submitButton {
+  margin: 5px;
+  width: 80px;
+  height: 50px;
+}
+
+#playBopIt {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bopItGame {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonsDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.bopMessages {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#twist, #bop, #pull {
+  display: none;
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+
+#twistIt, #bopIt, #pullIt, #points {
+  display: none;
+}
+
+#gameOver {
+  display: none;
+}
+
+
+/* Media queries to override built-in bootstrap */
+@media (min-width: 768px) {
+  .container {
+      width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
